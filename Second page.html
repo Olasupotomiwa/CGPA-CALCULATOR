@@ -290,6 +290,7 @@ button:hover{color: white;
     var i;
   for (i = 0; i < scores.length; i++) {
   if (scores[i].value < 45) { points[i].value = 0;}
+else if  (scores[i].value > 100) { points[i].value = "Invalid";}
 else if  (scores[i].value < 50) { points[i].value = 1;}
 else if  (scores[i].value < 60) { points[i].value = 2;}
 else if  (scores[i].value < 70) { points[i].value = 3;}
