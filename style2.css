@@ -85,9 +85,9 @@ a button:hover{opacity: 0.9;
 
 @media screen and (max-width: 500px) {
     .maincontent{margin-top: 30%;
-        font-size: 20px;
+        font-size: 30px;
     }
-  .footer{ position: relative;
+  .footer{ position: fixed;
    left: 0;
    bottom: 0;}
    .instruction{width: 90%;
