@@ -1,21 +1,20 @@
 
 
-
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow&family=Satisfy&family=Updock&display=swap" rel="stylesheet">
+   <script src="script.js"> </script>
+  <link rel="stylesheet" type="text/css" href="style1.css">
+ <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow&family=Satisfy&family=Updock&display=swap" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
-  
-  <meta charset="utf-8">
+ <meta charset="utf-8">
   <title>CGPA CALCULATOR</title>
-  <style type="text/css">
-
-
+   <style>
   body{background-color:  #4dffff;
     margin: 0px;
-  font-family: 'Pragati Narrow', sans-serif;}
+  font-family: 'Pragati Narrow', sans-serif;
+}
   html{scroll-behavior: smooth;
   
 }
@@ -25,7 +24,7 @@
   background-image: linear-gradient( #001a1a, white); /* Standard syntax (must be last) */
   margin: 0;
   padding: 15px;
-   font-family: 'Rajdhani', sans-serif;;
+  font-family: 'Rajdhani', sans-serif;
   font-weight: bold;
   font-size: 32px;
   color: white;
@@ -39,7 +38,6 @@
   padding: 15px;
 }
   #customers {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   margin: auto;
   width: 100%;}
@@ -56,14 +54,15 @@
 #customers th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
-  font-size: 18px;
   background-color:  #004d4d;
   color: white;
   text-align: center;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  text-shadow: 0px 0px 10px black;
 }
 input{width: 50px;
-  height: 8px;
+  height: 10px;
   border: 0.5px solid #00b3b3;
   border-radius: 4px;
   padding: 5px;
@@ -74,10 +73,11 @@ input:focus{outline: none;
   background: #00e6e6;
   cursor: pointer;
   border-color: white;
-  box-shadow:  0px 0px 30px white;}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button{-webkit-appearance:none;}
+  box-shadow:  0px 0px 30px white;
+}
+ input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{-webkit-appearance:none;} 
+      
 button{position: relative;
   background: #003333;
   color: white;
@@ -85,7 +85,8 @@ button{position: relative;
   border-radius: 10px;
   padding: 15px 10px 15px 10px;
   margin-top: 20px;
-   font-family: 'Pragati Narrow', sans-serif;
+  font-family: 'Pragati Narrow', sans-serif;
+  letter-spacing: 1px;
 }
 button:hover{color: white;
   background-color: #003333;
@@ -100,23 +101,19 @@ button:hover{color: white;
     padding: 10px;
   }
   }
-
 </style>
 
 </head>
 <body>
 
   <div id="grad1">
-   <span> CHECK YOUR CGPA</span>
-
-    
+    CHECK YOUR CGPA
   </div>
-  
-  <div class="content">
 
-    
+
+  <div class="content">
   <form>
-     <span style="text-align: center; color: #004d4d;">5 Points Scale</span>
+ <span> style="text-align: center; color: #004d4d;">5 Points Scale</span>
 
   <table id="customers">
 
@@ -132,165 +129,155 @@ button:hover{color: white;
         
           <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
           <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
 
         </tr>
  <tr>
         
-          <td><input type="number" name="gradechecker" min="1" max="5" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
           <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+        </tr>
+ <tr>
+        
+          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+        </tr>
+ <tr>
+        
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
 
         </tr>
  <tr>
         
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+        <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
           <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+        </tr>
+ <tr>
+        
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
 
         </tr>
  <tr>
         
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
           <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+        </tr>
+ <tr>
+        
+          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+        </tr>
+ <tr>
+        
+          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
 
         </tr>
  <tr>
         
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
           <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+        </tr>
+ <tr>
+        
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
 
         </tr>
  <tr>
         
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
           <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
 
         </tr>
  <tr>
         
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
           <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
 
         </tr>
  <tr>
         
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
           <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
 
         </tr>
  <tr>
         
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
           <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+        </tr>
+ <tr>
+        
+          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
 
         </tr>
  <tr>
         
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
           <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
 
         </tr>
  <tr>
         
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
           <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
 
         </tr>
  <tr>
         
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
           <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
 
         </tr>
  <tr>
-        
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
           <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
-
+          <td><input type="number" name="Unit" class="Unit"></td>
         </tr>
  <tr>
         
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
           <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
-
-        </tr>
- <tr>
-        
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
-          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
-
-        </tr>
- <tr>
-        
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
-          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
-
-        </tr>
- <tr>
-        
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
-          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
-
-        </tr>
- <tr>
-        
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
-          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
-
-        </tr>
- <tr>
-        
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
-          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
-
-        </tr>
- <tr>
-        
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
-          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
-
-        </tr>
- <tr>
-        
-          <td><input type="text" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
-          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="text" name="Unit" class="Unit"></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
         </tr>
         
   </table>
   <input type="reset" name="" style="float: right; margin-top: 20px; color: black; background: white; border: none; height: 20px;">
-  <hr>
 </form>
 
 
  <button onclick="summary(2)">Get CGPA</button>
+ <p><strong>Note :</strong> Do not deactivate this page from loading additional dialogs.</p>
+
    <h1 class="summary"></h1>  
  </div>
 
-  <a href="index.html"><button style="margin: 15px 10px;">GO TO HOMEPAGE</button></a>
+  <a href="index.html"><button style="margin: 30px 50px;">GO TO HOMEPAGE</button></a>
 
   
-    <script>
-
-        
+   <script>
 
    function writeMessage(){
     var scores = document.getElementsByClassName("demo1");
@@ -332,9 +319,6 @@ else alert("CGPA : " + x + " \n Division: First Class");
 }
 
 
-
-
-
-  </script> 
+ </script>   
   </body>
 </html>
