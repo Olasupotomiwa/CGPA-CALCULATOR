@@ -87,11 +87,17 @@ button{position: relative;
   margin-top: 20px;
   font-family: 'Pragati Narrow', sans-serif;
   letter-spacing: 1px;
+   display: block;
+   cursor: pointer;
 }
 button:hover{color: white;
   background-color: #003333;
   opacity: 0.8;
-  transition: 1s;
+   transition: .5s;
+   font-weight: bold;
+}
+      
+      a{text-decoration: none;
 }
 @media screen and (max-width: 500px) {
   .content{max-width: 80%;}
@@ -114,6 +120,8 @@ button:hover{color: white;
   <div class="content">
   <form>
 <h2 style="text-align: center; color: #004d4d; border: 1px solid gray;">5 Points Scale</h2>
+     ⚠<i>Failure to provide the number of units for each score will lead to inaccurate evaluation</i>
+
 
   <table id="customers">
 
@@ -124,46 +132,6 @@ button:hover{color: white;
         </tr>
 
       
-
-  <tr>
-        
-          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
-          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="number" name="Unit" class="Unit"></td>
-
-        </tr>
- <tr>
-        
-          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
-          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="number" name="Unit" class="Unit"></td>
-        </tr>
- <tr>
-        
-          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
-          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="number" name="Unit" class="Unit"></td>
-        </tr>
- <tr>
-        
-         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
-          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="number" name="Unit" class="Unit"></td>
-
-        </tr>
- <tr>
-        
-        <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
-          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="number" name="Unit" class="Unit"></td>
-        </tr>
- <tr>
-        
-         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
-          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
-          <td><input type="number" name="Unit" class="Unit"></td>
-
-        </tr>
  <tr>
         
          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
@@ -265,10 +233,11 @@ button:hover{color: white;
         
   </table>
   <input type="reset" name="" style="float: right; margin-top: 20px; color: black; background: white; border: none; height: 20px;">
+     <button onclick="append()">Add Scores +</button> 
 </form>
 
 
- <button onclick="summary(2)">Get CGPA</button>
+ <button onclick="summary(2)">Calculate CGPA</button>
  <p><strong>Note :</strong> Do not deactivate this page from loading additional dialogs.</p>
 
    <h1 class="summary"></h1>  
@@ -316,6 +285,40 @@ else if (x < 3.5) alert("CGPA : " + x + " \n Division: Second Class Lower");
 else if (x < 4.5) alert("CGPA : " + x + " \n Division: Second Class Upper");
 
 else alert("CGPA : " + x + " \n Division: First Class");
+}
+      function append() {
+ //first column 
+var input = document.createElement("input");
+input.type = "number"
+input.classList.add("demo1")
+input.addEventListener("keyup", writeMessage);
+var td = document.createElement("td");
+td.appendChild(input);
+var tr = document.createElement("tr");
+tr.appendChild(td);
+
+
+//Second column
+var input1 = document.createElement("input");
+input1.type = "text"
+input1.classList.add("demo2")
+input1.disabled = true;
+var td = document.createElement("td");
+td.appendChild(input1);
+tr.appendChild(td);
+   
+   
+//Third Column
+var input2 = document.createElement("input");
+input2.type = "number"
+input2.classList.add("Unit")
+var td = document.createElement("td");
+td.appendChild(input2);
+tr.appendChild(td);
+
+var table = document.getElementById("customers");
+
+table.appendChild(tr);
 }
 
 
