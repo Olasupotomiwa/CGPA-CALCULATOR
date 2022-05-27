@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
    <script src="script.js"> </script>
-  <link rel="stylesheet" type="text/css" href="style1.css">
+  
  <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow&family=Satisfy&family=Updock&display=swap" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
  <meta charset="utf-8">
@@ -25,7 +25,7 @@
   margin: 0;
   padding: 15px;
   font-family: 'Rajdhani', sans-serif;
-  font-weight: bold;
+  font-weight: bold;8
   font-size: 32px;
   color: white;
   text-align: center;
@@ -61,7 +61,7 @@
   font-size: 18px;
   text-shadow: 0px 0px 10px black;
 }
-input{width: 50px;
+.content input{width: 50px;
   height: 10px;
   border: 0.5px solid #00b3b3;
   border-radius: 4px;
@@ -69,7 +69,7 @@ input{width: 50px;
   text-align: center;
   margin-left: 30%;
 }
-input:focus{outline: none;
+.content input:focus{outline: none;
   background: #00e6e6;
   cursor: pointer;
   border-color: white;
@@ -78,7 +78,7 @@ input:focus{outline: none;
  input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button{-webkit-appearance:none;} 
       
-button{position: relative;
+.button1{position: relative;
   background: #003333;
   color: white;
   border: none;
@@ -90,7 +90,7 @@ button{position: relative;
    display: block;
    cursor: pointer;
 }
-button:hover{color: white;
+.button1:hover{color: white;
   background-color: #003333;
   opacity: 0.8;
   transition: .5s;
@@ -98,12 +98,85 @@ button:hover{color: white;
 }
       a{text-decoration: none;
 }
-@media screen and (max-width: 500px) {
+
+
+
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 9;
+  border-radius: 10px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 250px;
+  padding: 20px;
+  background: #003333;
+  color: white;
+  border-radius: 10px;
+   border: 3px solid #f1f1f1;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=email], .form-container textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 3px 11px 11px 0;
+  border: none;
+  background: #f1f1f1;
+  text-align: left;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password], .form-container input[type=email], .form-container textarea:focus {
+ 
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: white;
+  color: #003666;
+  padding: 8px 10px;
+  border: none;
+  cursor: pointer;
+  width: 45%;
+  margin: auto;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+  color: white;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 700px) {
   .content{max-width: 80%;}
-  input{margin-left: 0%;
+  .content input{margin-left: 0%;
   }
   #grad1{font-size: 20px;
     padding: 10px;
+  }
+  .form-container{position: relative;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form-popup{position: relative;
+    display: block;
+    left: 0px;
   }
   }
 </style>
@@ -129,7 +202,39 @@ button:hover{color: white;
             <th>Enter No of Units</th>
         </tr>
 
-     
+      
+ <tr>
+        
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+        </tr>
+ <tr>
+        
+          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+        </tr>
+ <tr>
+        
+          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+
+        </tr>
+ <tr>
+        
+          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+        </tr>
+ <tr>
+        
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+
+        </tr>
  <tr>
         
          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
@@ -200,19 +305,47 @@ button:hover{color: white;
   </table>
   <input type="reset" name="" style="float: right; margin-top: 20px; color: black; background: white; border: none; height: 20px;">
 </form>
-     <button onclick="append()">Add Scores +</button> 
+     <button class="button1" onclick="append()">Add Scores +</button> 
 
 
 
- <button onclick="summary(2)">Calculate CGPA</button>
+ <button class="button1" onclick="summary(2)">Get CGPA</button>
  <p><strong>Note :</strong> Do not deactivate this page from loading additional dialogs.</p>
 
    <h1 class="summary"></h1>  
  </div>
 
-  <a href="index.html"><button style="margin: 30px 50px;">GO TO HOMEPAGE</button></a>
+  <a href="index.html"><button class="button1" style="margin: 30px 50px;">GO TO HOMEPAGE</button></a>
 
-  
+
+
+
+
+  <button class="button1" onclick="openForm()" style="margin: 30px 50px;">DROP A REVIEW</button>
+
+<div class="form-popup" id="myForm">
+  <form class="form-container" action="https://formsubmit.co/tomiwaolasupo@gmail.com" method="POST">
+    
+    
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter name, firstname first" name="name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" required>
+
+
+    <label for="textarea"><b>Comment </b></label>
+    <textarea rows="4">
+</textarea>
+
+     <input type="hidden" name="_next" value="https://olasupotomiwa.github.io/CGPA-CALCULATOR/">
+     <input type="hidden" name="_captcha" value="false">
+     <button type="submit" class="btn">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+  </body>
    <script>
 
         
@@ -284,6 +417,15 @@ tr.appendChild(td);
 var table = document.getElementById("customers");
 
 table.appendChild(tr);
+}
+
+//Function for the review box
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
 }
  
  </script>   
