@@ -2,15 +2,13 @@
 
 
 ## Description
-```md 
-   ![CGPA CALCULATOR picture](assets/images/)
-```
 
-*I made use of the CSS table structure to fix in the input box
-*This Project was inspired by the difficulty faced by so many students of the higher instition in Nigeria when trying to calculate their CGPA.
-*Weeks after being into Javascript, I thought of it and it came into realization.
-*Based on the scores entered by the users, a conditional statement to assign a point to each scores was written
-*The CGPA is then calculated by addding the total points and then dividing it with the total no of units entered
+
+- I made use of the CSS table structure to fix in the input box
+- This Project was inspired by the difficulty faced by so many students of the higher instition in Nigeria when trying to calculate their CGPA.
+- Weeks after being into Javascript, I thought of it and it came into realization.
+- Based on the scores entered by the users, a conditional statement to assign a point to each scores was written
+- The CGPA is then calculated by addding the total points and then dividing it with the total no of units entered
 
 ##Challenges
 
