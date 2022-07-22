@@ -1,0 +1,162 @@
+*{outline: none;
+    box-sizing: border-box;
+   }
+  body{background-color:  #00ffff;
+    margin: 0px;
+    font-family: 'Pragati Narrow', sans-serif;
+  font-size: 16px;
+}
+  html{scroll-behavior: smooth;
+  
+}
+#head {
+  background-color: grey; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, #001a1a, white); /* Standard syntax (must be last) */
+  margin: 0;
+  padding: 15px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: bold;
+  font-size: 2.8vw;
+  color: white;
+  text-align: center;
+  text-shadow: 0px 0px 10px black;
+}
+.content {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 15px;
+}
+  #Inside-table {
+  border-collapse: collapse;
+  margin: auto;
+  width: 100%;}
+
+  #Inside-table td, #Inside-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#Inside-table tr:nth-child(even){background-color: #008080;}
+
+#Inside-table tr:hover {background-color: white;}
+
+#Inside-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color:  #004d4d;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  text-shadow: 0px 0px 10px black;
+}
+.content input{width: 50px;
+  height: 18px;
+  border: 0.5px solid #00b3b3;
+  border-radius: 3px;
+  text-align: center;
+  margin-left: 0%;
+ 
+}
+.content input:focus{outline: none;
+  background: #00e6e6;
+  cursor: pointer;
+  border-color: white;
+  box-shadow:  0px 0px 30px white;
+}
+.modal-body{
+  font-size: 16px;
+}
+
+
+
+ input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{-webkit-appearance:none;} 
+      
+.button1{position: relative;
+  background: #003333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 10px;
+  margin-top: 20px;
+  font-family: 'Pragati Narrow', sans-serif;
+  letter-spacing: 1px;
+   display: block;
+   cursor: pointer;
+   opacity: 0.8;
+   transition: .5s;
+}
+.button1:hover{color: white;
+  background-color: #003333;
+  opacity: 1;
+  transition: .5s;
+    font-weight: bold;
+}
+      a{text-decoration: none;
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+  .content{max-width: 88%;
+    padding: 8px;}
+  .content input{margin-left: 0%;
+  }
+  #head{font-size: 5vw;
+    padding: 10px;
+  }
+  }
+
+
+  /*Ripple Css*/
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="CGPA NEW.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow&family=Satisfy&family=Updock&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+  <title>CGPA CALCULATOR ‖ 4 point scale</title>
+
+   
+</head>
+<body>
+
+  <div id="head">
+    C H E C K &nbsp Y O U R  &nbsp  C G P A   <span class="spinner-grow spinner-grow-lg" role="status" aria-hidden="true"></span>
+  </div>
+
+
+  <div class="content">
+  <form>
+  <h2 style="text-align: center; color: #004d4d; border-bottom: 1px solid gray;"> Four Point Scale</h2>
+  <i style="padding: 5px;">Failure to provide the number of units for each score will lead to inaccurate evaluation</i>
+
+  <table id="Inside-table">
+
+  <tr>
+      <th>Scores</th>
+      <th>Equivalent point <br> (Automated)</th>
+            <th>Enter No of Units</th>
+        </tr>
+
+      
+
+ <tr>
+        
+          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+        </tr>
+ <tr>
+        
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+
+        </tr>
+ <tr>
+        
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+
+        </tr>
+ <tr>
+        
+          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+
+        </tr>
+ <tr>
+        
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+
+        </tr>
+ <tr>
+        
+          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+        </tr>
+ <tr>
+        
+          <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+
+        </tr>
+ <tr>
+        
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+
+        </tr>
+ 
+ <tr>
+        
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+
+        </tr>
+ <tr>
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+        </tr>
+ <tr>
+        
+         <td><input type="number" name="gradechecker" onkeyup="writeMessage()" class="demo1"></td>
+          <td><input type="display" name="Pointchecker" class="demo2" disabled></td>
+          <td><input type="number" name="Unit" class="Unit"></td>
+        </tr>
+        
+  </table>
+  <input type="reset" name="" style="float: right; margin-top: 20px; color: white; background: darkkhaki; border: none; height: 23px;">
+</form>
+     <button class="button1" onclick="append()">Add Scores +</button> 
+
+
+<!--
+ <button class="button1" onclick="summary(2)">Get CGPA</button>
+-->
+
+
+  <!-- Button trigger modal -->
+<button type="button" class="button1" id="OpenBtn" onclick="summary(2)">
+  Get CGPA
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" tabindex="-1" data-bs-backdrop="static" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="staticBackdropLabel">Result </h4>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+     
+    </div>-
+  </div>
+</div>
+
+   <h1 class="summary"></h1>  
+ </div>
+
+
+
+  <button type="button" class="button1" style="margin: 30px 50px;" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">DROP A REVIEW</button>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Drop a review</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form  action="https://formsubmit.co/tomiwaolasupo@gmail.com" method="POST">
+
+         <div class="form-floating mb-3">
+  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+  <label for="floatingInput">Email address</label>
+         </div>
+          
+           <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="floatingInput" placeholder="John Doe" required>
+     <label for="floatingInput">Name</label>
+  </div>
+
+          <div class="form-floating mb-3">
+           
+            <textarea class="form-control" id="floatingInput" placeholder="name@example.com" required></textarea>
+             <label for="floatingInput">Message</label>
+          </div>
+           <div class="modal-footer">
+            <input type="hidden" name="_next" value="index.html">
+     <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit" class="button1">Send message</button>
+        </form>
+   </div> 
+</div>
+    </div>
+    </div>
+  </div>
+</div>
+ <a href="index.html"><button class="button1" style="margin: 30px 50px;">GO TO HOMEPAGE</button></a>
+
+
+
+
+
+
+   
+   <script src="4 point.js">
+
+ </script>   
+  </body>
+</html>
