@@ -82,6 +82,22 @@
       
       table.appendChild(tr);
       }
+
+ var button = document.querySelector('#OpenBtn')
+      var spinner = document.querySelector('.lds-spinner')
+      button.addEventListener("click", CtrlContent)
+      function CtrlContent(){
+        document.querySelector('.modalc').style.display = 'none'
+        spinner.style.display = 'block'
+        setTimeout( () => {
+          document.querySelector('.lds-spinner').style.display = 'none'
+          document.querySelector('.modalc').style.display = 'block'
+        
+         
+         
+      }, 1500);
+
+      }
       
       
       
